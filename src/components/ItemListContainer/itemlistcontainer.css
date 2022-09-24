@@ -1,0 +1,15 @@
+.container{
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+  }
+  .flex{
+    display: flex;
+    flex-direction: row;
+  }
+  h1{
+    color: aliceblue;
+  }

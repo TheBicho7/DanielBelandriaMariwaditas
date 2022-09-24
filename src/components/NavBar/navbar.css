@@ -1,0 +1,28 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.list{
+    text-decoration: none;
+}
+.list:hover{
+    background-color: green;
+    height: 50px;
+
+}
+
+li{
+    list-style: none;
+    display: block;
+    margin: 3vh;
+    color: white;
+}

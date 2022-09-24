@@ -7,18 +7,16 @@ export default function Card(props) {
   return (
     <>
       <div className="card">
+      <h2>{props.title}</h2>
         <div className="card-img">
           <img src={props.img} alt=""></img>
         </div>
         <div className="card-detail">
-          <h2>{props.title}</h2>
-          <p>{props.detail}</p>
           <h4>$ {props.price}</h4>
         </div>
 
-        <Button otraprop="otraprop">{`Apredende ${props.title}`}</Button>
+        <Button otraprop="otraprop">{`agregar al carrito`}</Button>
       </div>
-      <a href="/">Ver más</a>
     </>
   );
 }

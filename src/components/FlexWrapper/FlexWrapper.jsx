@@ -1,10 +1,11 @@
 import React from "react";
-import "./flexwrapper.css";
+import NavBar from "../NavBar/NavBar";
+import Card from "../Card/Card";
 
 function FlexWrapper(props) {
   return (
     <div>
-      <h1>Listado de nuestros cursos</h1>
+      <h1>Nuevos Productos</h1>
       <div className="flex">{props.children}</div>
     </div>
   );
