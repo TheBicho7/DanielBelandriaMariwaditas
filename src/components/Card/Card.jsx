@@ -1,5 +1,6 @@
 import Button from "../Button/Button";
 import "./card.css";
+import { Link } from "react-router-dom";
 
 export default function Card(props) {
   console.log(props);
@@ -14,9 +15,10 @@ export default function Card(props) {
         <div className="card-detail">
           <h4>$ {props.price}</h4>
         </div>
-
-        <Button otraprop="otraprop">{`agregar al carrito`}</Button>
-      </div>
+        <Link to={`/detail/${props.id}`}>
+        <Button color={props.color}>{`agregar al carrito`}</Button>
+        </Link>
+      </div>   
     </>
   );
 }
