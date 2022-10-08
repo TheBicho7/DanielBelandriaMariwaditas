@@ -7,7 +7,7 @@ import CardDetail from "./CardDetail";
 import dataBase from "../DateBase/dataBase"
 
 function ItemListContainer(props) {
-  const [productos, setProduct] = useState([]);
+  const [producto, setProduct] = useState([]);
 
 const { id } = useParams();
 
@@ -20,10 +20,10 @@ const { id } = useParams();
   return (
     <div className="container">
       <CardDetail 
-      title={productos.title} 
-      img={productos.img} 
-      price={productos.price}  
-      detail={productos.detail} 
+      title={producto.title} 
+      img={producto.img} 
+      price={producto.price}  
+      detail={producto.detail} 
       />;
     </div>
     

@@ -10,7 +10,7 @@ function NavBar() {
         <Link to="/" className="list">
           <li>Inicio</li>
         </Link>
-        <Link href="#" className="list">
+        <Link to="/category/:categoryId" className="list">
           <li>Ofertas</li>
         </Link>
         <Link href="#" className="list">
