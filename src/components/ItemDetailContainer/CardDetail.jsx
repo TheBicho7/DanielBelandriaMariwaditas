@@ -1,6 +1,5 @@
 import React from "react";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
-
 import ItemCount from "../ItemCount/ItemCount";   
 import "./itemdetail.css";
 

@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
 {
     id: 1 , 
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk3W4vKhQQ_I4PlKsrKXM5wljQIEV_5eXaKw&usqp=CAU",
@@ -40,16 +40,6 @@ const productos = [
 export function getProducts() {
     return new Promise((resolve) => {
       setTimeout(() => resolve(productos), 2000);
-    });
-  }
-
-  export function getOneProduct(idParams) {
-    return new Promise((resolve) => {
-
-      let productoReq = productos.find((item) => {
-        return item.id === Number(idParams);
-      });
-      setTimeout(() => resolve(productoReq), 1500);
     });
   }
 

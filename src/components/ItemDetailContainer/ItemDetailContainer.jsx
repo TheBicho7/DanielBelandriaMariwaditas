@@ -1,34 +1,30 @@
 import React from "react";
 import Card from "../Card/Card";
-import { getOneProduct } from "../DateBase/dataBase"
+import { getProducts, productos } from "../DateBase/dataBase"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CardDetail from "./CardDetail";
 import dataBase from "../DateBase/dataBase"
 
-function ItemListContainer(props) {
+function ItemDetailContainer(props) {
   const [producto, setProduct] = useState([]);
 
 const { id } = useParams();
+console.log(id);
 
   useEffect(() => {
-    getOneProduct().then((productos) => {
-      setProduct(productos);
-    });
-  },[id]);
-
-  return (
+    const getData = () => {
+      return getProducts((resolve) => {
+        setTimeout(() =>{
+          resolve(productos)
+        },3000);
+      })
+    }
+  },[id])
+  return(
     <div className="container">
-      <CardDetail 
-      title={producto.title} 
-      img={producto.img} 
-      price={producto.price}  
-      detail={producto.detail} 
-      />;
+      <CardDetail producto={producto}/>
     </div>
-    
   );
 };
-
-
-export default ItemListContainer; 
+export default ItemDetailContainer;
